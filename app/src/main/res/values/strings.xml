@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">QueDo</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="btnhomelogin">Login</string>
+    <string name="btncreateacc">CREATE AN ACCOUNT</string>
+    <string name="welcometxt">Welcome</string>
+    <string name="btndltacc">Delete Acc</string>
+    <string name="btndltcancel">Cancel</string>
+    <string name="backtohome">Back to Home</string>
+    <string name="txtDeleteAcc">Delete Acc</string>
+
+    <string name="alltask">ALL TASKS</string>
+    <string name="addnew">+</string>
+    <string name="btnsave">SAVE</string>
+    <string name="editTextTextName3">Type</string>
+    <string name="editTextTextName2">I want to</string>
+
+    <string name="addName">I want to</string>
+    <string name="addType">Type</string>
+    <string name="addnew2">edittask</string>
+
+
+
+</resources>
