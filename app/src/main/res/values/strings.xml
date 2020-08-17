@@ -51,4 +51,56 @@
         <item>Research Papers</item>
     </string-array>
 
+
+    <string name="timeTablePage">Timetables</string>
+    <string name="searchTable">Search Timetable</string>
+    <string name="timetable">Timetable</string>
+    <string name="newTable">New Timetable</string>
+    <string name="tue">Tuesday</string>
+    <string name="addSub">Add Subject</string>
+    <string name="submitBtn">Submit</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string-array name="classTypeSpin">
+        <item>Lecture</item>
+        <item>Tute</item>
+        <item>Lab</item>
+    </string-array>
+
+    <string name="log_in">Log in</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confrim_password">Confrim Password</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="edit_profile_ndetails">EDIT PROFILE\nDETAILS</string>
+    <string name="py">25 Questions covering the basics of Python and related contents.</string>
+    <string name="c_quiz">C# QUIZ</string>
+    <string name="cs">25 Questions covering the basics of C# including OOP concepts.</string>
+    <string name="level_medium">Level : Medium</string>
+    <string name="python_quiz">Python QUIZ</string>
+    <string name="_25_questions_covering_the_basics_of_java_including_oop_concepts">25 Questions covering the basics of Java including OOP concepts.</string>
+    <string name="level_basics">Level : Basics</string>
+    <string name="question_1_of_40">Question 1 of 40:</string>
+    <string name="q1">What does HTML stand for?</string>
+    <string name="a1">Hyper Text Markup Language</string>
+    <string name="a2">Hyperlinks and Text Markup Language</string>
+    <string name="a3">Home Tool Markup Language</string>
+    <string name="nq">Next Question</string>
+    <string name="start_over">Start Over</string>
+    <string name="qd">You can test your HTML skills with \nQuDo\'s Java Quiz.</string>
+    <string name="td">he test contains 40 questions and there\n is no time limit.</string>
+    <string name="score_count">Score Count</string>
+    <string name="sc">You will get 1 point for each correct answer. At the end of the Quiz, your total score will be displayed. Maximum score\n is 40 points.</string>
+    <string name="start_the_quiz">Start the Quiz</string>
+    <string name="good_luck">Good luck!</string>
+    <string name="start_the_java_quiz">Start the Java Quiz</string>
+    <string name="java_quiz">Java QUIZ</string>
+    <string name="results">Results</string>
+    <string name="r">21 of 40</string>
+    <string name="comment">You must study harder!</string>
+    <string name="be">Badge Earned</string>
+    <string name="try_again">Try Again</string>
+    <string name="back_to_quizzes">Back to Quizzes</string>
 </resources>

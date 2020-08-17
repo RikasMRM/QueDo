@@ -16,11 +16,19 @@ public class HomeW extends AppCompatActivity {
         setContentView(R.layout.homew);
 
         Button loginBtn = (Button)findViewById(R.id.btnhomelogin);
+        Button regBtn = (Button)findViewById(R.id.btncreateacc);
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(HomeW.this, userLogin.class));
+            }
+        });
+
+        regBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeW.this, SignUp.class));
             }
         });
     }
