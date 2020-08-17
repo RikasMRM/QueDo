@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfile"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="102dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo_p" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="55dp"
+            android:gravity="center"
+            android:text="@string/edit_profile_ndetails"
+            android:textColor="@color/Black"
+            android:textSize="25dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+
+        android:gravity="center">
+
+
+        <EditText
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:hint="Wade Wilson"
+            android:textColorHint="@color/Black"
+            android:backgroundTint="#F3F2F2"
+            android:layout_marginTop="25dp"
+            android:paddingLeft="15dp"
+            android:inputType="text"
+            android:elevation="5dp"
+            android:background="@drawable/btn"
+            />
+
+        <EditText
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:hint="Wade2016@gmail.com"
+            android:textColorHint="@color/Black"
+            android:backgroundTint="#F3F2F2"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="15dp"
+            android:inputType="text"
+            android:elevation="5dp"
+            android:background="@drawable/btn"
+            />
+
+        <EditText
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:hint="Password"
+            android:textColorHint="@color/Gray"
+            android:backgroundTint="#F3F2F2"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="15dp"
+            android:inputType="text"
+            android:elevation="5dp"
+            android:background="@drawable/btn"
+            />
+
+        <EditText
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:hint="Confrim Password"
+            android:textColorHint="@color/Gray"
+            android:backgroundTint="#F3F2F2"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="15dp"
+            android:inputType="text"
+            android:elevation="5dp"
+            android:background="@drawable/btn"
+            />
+
+        <Button
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:id="@+id/signup"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:layout_marginTop="25dp"
+            android:elevation="5dp"
+            android:background="@drawable/signup_btn"
+            />
+
+        <Button
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:id="@+id/signin"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:elevation="5dp"
+            android:background="@drawable/signin_btn"
+            />
+    </LinearLayout>
+
+</LinearLayout>

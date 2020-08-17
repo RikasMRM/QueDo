@@ -9,6 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".SignUp"></activity>
+        <activity android:name=".Results" />
+        <activity android:name=".Questions" />
+        <activity android:name=".QuizzesDetails" />
+        <activity android:name=".QuizzesHome" />
+        <activity android:name=".EditProfile" />
         <activity android:name=".userLogin"></activity>
         <activity android:name=".HomeW">
             <intent-filter>

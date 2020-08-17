@@ -2,6 +2,7 @@ package com.example.quedo;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,8 @@ public class HomeFragment extends Fragment {
 
         ImageButton btnReminder= (ImageButton) rootView.findViewById(R.id.reminderbtn);
         ImageButton btnLibrary= (ImageButton) rootView.findViewById(R.id.librarybtn);
+        ImageButton btnTable= (ImageButton) rootView.findViewById(R.id.timetablebtn);
+        ImageButton btnQuiz= (ImageButton) rootView.findViewById(R.id.quizzesbtn);
 
         btnLibrary.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +40,24 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new AllTasks()).addToBackStack(null).commit();
+            }
+
+        });
+
+        btnTable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new Timetables()).addToBackStack(null).commit();
+            }
+
+        });
+
+        btnQuiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent dsp = new Intent(HomeFragment.this.getActivity(), Questions.class);
+                startActivity(dsp);
             }
 
         });
