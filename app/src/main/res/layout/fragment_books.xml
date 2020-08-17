@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lightgreen">
+
+    <TextView
+        android:id="@+id/booksTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bookPage"
+        android:textSize="40dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:padding="4dp"
+        android:textColor="@color/colorPrimaryDark"
+        />
+
+
+    <EditText
+        android:id="@+id/findBooks"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        android:ems="10"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:hint="Type name of the book"  />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort By A-Z"
+        android:layout_marginLeft="4dp"
+        android:padding="4dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bookRecycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:scrollbars="vertical"
+        android:layout_below="@id/booksTitle" />
+
+
+
+</LinearLayout>

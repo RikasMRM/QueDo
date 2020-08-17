@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/addDocTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/editDocPage"
+        android:textSize="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textColor="@color/colorPrimaryDark"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_margin="12dp"
+        android:background="@color/lightgreen" >
+
+        <TextView
+            android:id="@+id/docTypeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/docType"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="3dp"/>
+
+        <Spinner
+            android:id="@+id/docTypeEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp" />
+
+        <TextView
+            android:id="@+id/docNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/docName"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="3dp"/>
+
+        <EditText
+            android:id="@+id/docNameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_marginBottom="7dp"/>
+
+        <TextView
+            android:id="@+id/docAuthText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/docAuth"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="3dp"/>
+
+        <EditText
+            android:id="@+id/docAuthEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_marginBottom="7dp"/>
+
+        <TextView
+            android:id="@+id/docChild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/docChild"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="3dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:id="@+id/yesRadioBtn"
+                android:layout_marginLeft="20dp"
+                android:checked="false"
+                android:onClick="onRadioButtonClicked"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:id="@+id/noRadioBtn"
+                android:layout_marginLeft="40dp"
+                android:checked="false"
+                android:onClick="onRadioButtonClicked"/>
+
+        </RadioGroup>
+
+
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/submit"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnRemove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/remove"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</LinearLayout>
