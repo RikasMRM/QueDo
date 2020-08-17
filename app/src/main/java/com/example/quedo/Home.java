@@ -1,13 +1,13 @@
 package com.example.quedo;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-
+import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -54,6 +54,13 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
             case R.id.nav_logout:
                 startActivity(new Intent(Home.this, HomeW.class));
+            case R.id.nav_profile:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new ProfileFragment()).commit();
+                break;
+            case R.id.nav_help:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new HelpFragment()).commit();
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);
