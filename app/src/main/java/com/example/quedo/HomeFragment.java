@@ -20,16 +20,23 @@ public class HomeFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
-        ImageButton btnLibrary= (ImageButton) rootView.findViewById(R.id.reminderbtn);
+        ImageButton btnReminder= (ImageButton) rootView.findViewById(R.id.reminderbtn);
         ImageButton btnLibrary= (ImageButton) rootView.findViewById(R.id.librarybtn);
+
         btnLibrary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(HomeFragment.this.getActivity(), LibraryFragment.class);
-//                HomeFragment.this.startActivity(intent);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new LibraryFragment()).addToBackStack(null).commit();
+            }
+
+        });
+
+        btnReminder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new AllTasks()).addToBackStack(null).commit();
-                        new LibraryFragment()).addToBackStack(null).commit();
             }
 
         });
