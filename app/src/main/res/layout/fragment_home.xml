@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -20,7 +21,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/ic_reminder"
+                app:srcCompat="@drawable/ic_reminder"
                 android:background="@color/lightyellow" />
 
             <ImageButton
@@ -28,7 +29,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/ic_quizzes"
+                app:srcCompat="@drawable/ic_quizzes"
                 android:background="@color/colorAccent" />
         </LinearLayout>
 
@@ -43,7 +44,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/ic_library"
+                app:srcCompat="@drawable/ic_library"
                 android:background="@color/darkGreen"
                 android:onClick="goToLibrary" />
 
@@ -52,7 +53,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/ic_timetable"
+                app:srcCompat="@drawable/ic_timetable"
                 android:background="@color/green"  />
         </LinearLayout>
     </LinearLayout>

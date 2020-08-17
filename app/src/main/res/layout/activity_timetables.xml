@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/addDocTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:text="@string/timeTablePage"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="38dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/searchTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="10dp"
+        android:drawableLeft="@drawable/ic_baseline_search"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/colorPrimaryDark"
+        android:hint="@string/searchTable" />
+
+    <include android:id="@+id/table1" layout="@layout/timetable_card" />
+    <include layout="@layout/timetable_card" />
+
+    <Button
+        android:id="@+id/addTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="13dp"
+        android:text="@string/newTable"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimary"
+        android:drawableTop="@drawable/ic_baseline_add"
+        android:drawableTint="@color/colorPrimary"
+        android:padding="8dp"/>
+
+</LinearLayout>
