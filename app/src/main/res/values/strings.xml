@@ -23,5 +23,32 @@
     <string name="addnew2">edittask</string>
 
 
+    <string name="bookPage">Books</string>
+    <string name="addDocPage">ADD NEW DOCUMENT</string>
+    <string name="docType">Document Type*</string>
+    <string name="docName">Document Name*</string>
+    <string name="docAuth">Document Author*</string>
+    <string name="docChild">Is this suitable for children ?</string>
+    <string name="docUpload">Upload the Document</string>
+    <string name="selectDocu">Select the Document</string>
+    <string name="terms">I accept the terms and conditions</string>
+    <string name="submit">Submit</string>
+    <string name="reqDocu">REQUEST A DOCUMENT</string>
+    <string name="editDocPage">EDIT DOCUMENT DETAILS</string>
+    <string name="remove">Remove Document</string>
+    <string name="hintDocName">ex : A Brief History of Time</string>
+    <string name="hintDocAuth">ex :Stephen Hawking</string>
+    <string name="uploadDone">Uploaded Successful!</string>
+    <string name="requestDone">Request Successful!</string>
+    <string name="editDone">Updated Successful!</string>
+    <string name="login">Login</string>
+    <string name="userPro">User Profile</string>
+    <string name="editPro">Edit Profile</string>
+    <string name="remPro">Remove Profile</string>
+    <string-array name="docTypeSpin">
+        <item>Books</item>
+        <item>Past Papers</item>
+        <item>Research Papers</item>
+    </string-array>
 
 </resources>
