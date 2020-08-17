@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="102dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo_p"
+                android:layout_gravity=""/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Java QUIZ"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/Black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/qd"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/Black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The Test"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/Black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/td"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/Black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/score_count"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/Black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sc"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/Black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:background="#98E4E4"
+                android:padding="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start_the_quiz"
+                    android:textSize="30dp"
+
+                    android:textColor="@color/Black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/good_luck"
+                    android:textSize="20dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/Black"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textColor="@color/white"
+                    android:background="@color/darkGreen"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/start_the_java_quiz"
+                    android:textAllCaps="false"
+                    android:textSize="20dp"
+                    android:onClick="startquiz"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
