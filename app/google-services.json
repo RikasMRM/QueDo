@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "928127571820",
+    "firebase_url": "https://quedo-4f1c2.firebaseio.com",
+    "project_id": "quedo-4f1c2",
+    "storage_bucket": "quedo-4f1c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928127571820:android:19c9f49c5523b878c38549",
+        "android_client_info": {
+          "package_name": "com.example.quedo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928127571820-en29dav6tpqoj9sularfh4jmslurjjsl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASH1BmdTQ_7bdeGNZRLs7mQrBomTO-WrY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "928127571820-en29dav6tpqoj9sularfh4jmslurjjsl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

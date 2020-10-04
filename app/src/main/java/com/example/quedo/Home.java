@@ -84,10 +84,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 new AddNewTask()).addToBackStack(null).commit();
     }
 
-    public  void edittask(View v){
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                new EditTask()).addToBackStack(null).commit();
-    }
 
     public  void deletetask(View v) {
 //        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
