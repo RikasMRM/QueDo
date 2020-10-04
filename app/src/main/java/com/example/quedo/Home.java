@@ -15,15 +15,19 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawer;
+    FirebaseAuth mAuth;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        mAuth = FirebaseAuth.getInstance();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -55,7 +59,11 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 break;
 
             case R.id.nav_logout:
-                startActivity(new Intent(Home.this, HomeW.class));
+                if(mAuth.getCurrentUser() != null) {
+                    mAuth.signOut();
+                    startActivity(new Intent(Home.this, HomeW.class));
+                    finish();
+                }
             case R.id.nav_profile:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new ProfileFragment()).commit();
@@ -76,7 +84,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         } else {
             super.onBackPressed();
         }
-
     }
 
     public void addnewtask(View view) {
@@ -84,6 +91,10 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 new AddNewTask()).addToBackStack(null).commit();
     }
 
+    public  void edittask(View v){
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                new EditTask()).addToBackStack(null).commit();
+    }
 
     public  void deletetask(View v) {
 //        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,

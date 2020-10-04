@@ -55,6 +55,7 @@
 
 
         <EditText
+            android:id="@+id/userName"
             android:layout_width="280dp"
             android:layout_height="45dp"
             android:hint="@string/username"
@@ -68,6 +69,7 @@
             />
 
         <EditText
+            android:id="@+id/email"
             android:layout_width="280dp"
             android:layout_height="45dp"
             android:hint="@string/email"
@@ -81,6 +83,7 @@
             />
 
         <EditText
+            android:id="@+id/password"
             android:layout_width="280dp"
             android:layout_height="45dp"
             android:hint="@string/password"
@@ -94,6 +97,7 @@
             />
 
         <EditText
+            android:id="@+id/rePassword"
             android:layout_width="280dp"
             android:layout_height="45dp"
             android:hint="@string/confrim_password"
@@ -109,7 +113,7 @@
         <Button
             android:layout_width="280dp"
             android:layout_height="45dp"
-            android:id="@+id/signup"
+            android:id="@+id/regBtn"
             android:text="sign up"
             android:textColor="@color/white"
             android:layout_marginTop="25dp"

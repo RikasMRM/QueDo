@@ -37,7 +37,7 @@
             android:layout_marginBottom="3dp"/>
 
         <Spinner
-            android:id="@+id/docTypeEdit"
+            android:id="@+id/docTypeReq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="3dp" />
@@ -54,7 +54,7 @@
             android:layout_marginBottom="3dp"/>
 
         <EditText
-            android:id="@+id/docNameEdit"
+            android:id="@+id/docNameReq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hintDocName"
@@ -73,7 +73,7 @@
             android:layout_marginBottom="3dp"/>
 
         <EditText
-            android:id="@+id/docAuthEdit"
+            android:id="@+id/docAuthReq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hintDocAuth"
