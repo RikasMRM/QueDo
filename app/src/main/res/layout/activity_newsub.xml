@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/addSubTitle"
+        android:id="@+id/addDocTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
@@ -28,7 +28,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="ESD"
-        android:id="@+id/subName"
         android:layout_marginBottom="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp" />
@@ -56,7 +55,6 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/hallName"
         android:hint="Main Building, B505"
         android:layout_marginBottom="10dp"
         android:layout_marginRight="10dp"
@@ -71,7 +69,6 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/subDate"
         android:hint="Tuesday"
         android:layout_marginBottom="10dp"
         android:layout_marginRight="10dp"
@@ -87,13 +84,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="10.30 - 12.30"
-        android:id="@+id/subTime"
         android:layout_marginBottom="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp" />
 
     <Button
-        android:id="@+id/subSubmit"
+        android:id="@+id/submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="13dp"
