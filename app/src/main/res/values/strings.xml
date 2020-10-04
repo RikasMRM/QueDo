@@ -106,5 +106,12 @@
     <string name="be">Badge Earned</string>
     <string name="try_again">Try Again</string>
     <string name="back_to_quizzes">Back to Quizzes</string>
+
+    <string name="textview">TextView</string>
+    <string name="description">Description</string>
+    <string name="Title" />
+    <string name="title">Title</string>
+    <string name="quick_note">Quick Note</string>
+
     <string name="searchBook">Type name of the book</string>
 </resources>
