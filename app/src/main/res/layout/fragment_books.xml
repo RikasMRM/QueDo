@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/lightgreen">
 
@@ -18,7 +20,7 @@
         />
 
 
-    <EditText
+    <androidx.appcompat.widget.SearchView
         android:id="@+id/findBooks"
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -27,7 +29,15 @@
         android:padding="10dp"
         android:layout_margin="10dp"
         android:gravity="center"
-        android:hint="Type name of the book"  />
+        app:queryHint="@string/searchBook"
+        />
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:id="@+id/progressBar"
+        android:visibility="invisible"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -38,14 +48,16 @@
         android:textColor="@color/colorPrimaryDark"
         android:textSize="12sp" />
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/bookRecycle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/booksTitle"
         android:padding="4dp"
         android:scrollbars="vertical"
-        android:layout_below="@id/booksTitle" />
-
+        android:visibility="visible"
+        tools:visibility="visible" />
 
 
 </LinearLayout>

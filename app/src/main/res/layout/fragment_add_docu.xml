@@ -95,7 +95,8 @@
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/radioChild">
 
             <RadioButton
                 android:layout_width="wrap_content"
@@ -104,7 +105,7 @@
                 android:id="@+id/yesRadioBtn"
                 android:layout_marginLeft="20dp"
                 android:checked="false"
-                android:onClick="onRadioButtonClicked"/>
+               />
 
             <RadioButton
                 android:layout_width="wrap_content"
@@ -113,7 +114,18 @@
                 android:id="@+id/noRadioBtn"
                 android:layout_marginLeft="40dp"
                 android:checked="false"
-                android:onClick="onRadioButtonClicked"/>
+                />
+
+            <TextView
+                android:id="@+id/childRestText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50px"
+                android:layout_weight="1"
+                android:text="This field is required."
+                android:textColor="#FF0000"
+                android:textSize="10sp"
+                android:visibility="invisible" />
 
         </RadioGroup>
 
@@ -128,19 +140,16 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="3dp"/>
 
-        <Button
-            android:id="@+id/btnUpload"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/docuLink"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_margin="3dp"
+            android:layout_marginBottom="7dp"
             android:background="@color/lightgreen"
             android:drawableLeft="@drawable/ic_baseline_upload"
             android:drawablePadding="10dp"
-            android:layout_margin="8dp"
-            android:padding="6dp"
-            android:text="@string/selectDocu"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="11sp" />
+            android:padding="6dp" />
 
         <CheckBox
             android:id="@+id/checkBox"

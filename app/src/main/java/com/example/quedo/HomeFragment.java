@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 
 public class HomeFragment extends Fragment {
@@ -21,10 +22,10 @@ public class HomeFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
-        ImageButton btnReminder= (ImageButton) rootView.findViewById(R.id.reminderbtn);
-        ImageButton btnLibrary= (ImageButton) rootView.findViewById(R.id.librarybtn);
-        ImageButton btnTable= (ImageButton) rootView.findViewById(R.id.timetablebtn);
-        ImageButton btnQuiz= (ImageButton) rootView.findViewById(R.id.quizzesbtn);
+        Button btnReminder= (Button) rootView.findViewById(R.id.reminderbtn);
+        Button btnLibrary= (Button) rootView.findViewById(R.id.librarybtn);
+        Button btnTable= (Button) rootView.findViewById(R.id.timetablebtn);
+        Button btnQuiz= (Button) rootView.findViewById(R.id.quizzesbtn);
 
         btnLibrary.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,4 +65,7 @@ public class HomeFragment extends Fragment {
 
         return rootView;
     }
+
 }
+
+
