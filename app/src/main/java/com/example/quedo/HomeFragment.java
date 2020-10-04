@@ -57,7 +57,7 @@ public class HomeFragment extends Fragment {
         btnQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent dsp = new Intent(HomeFragment.this.getActivity(), Questions.class);
+                Intent dsp = new Intent(HomeFragment.this.getActivity(), QuickNotes.class);
                 startActivity(dsp);
             }
 
