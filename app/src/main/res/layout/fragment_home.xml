@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -16,22 +17,34 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <ImageButton
+            <Button
                 android:id="@+id/reminderbtn"
+                android:text="Tasks"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:textSize="16pt"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/ic_reminder"
-                android:background="@color/lightyellow" />
+                android:paddingTop="300px"
+                android:background="@color/lightyellow"
+                android:drawableTop="@drawable/ic_reminder" />
 
-            <ImageButton
+
+            <Button
                 android:id="@+id/quizzesbtn"
+                android:text="Quiz"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/ic_quizzes"
+                android:textColor="@color/white"
+                android:textSize="16pt"
+                android:paddingTop="300px"
+                android:drawableTop="@drawable/ic_quizzes"
                 android:background="@color/colorAccent" />
+
         </LinearLayout>
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,21 +52,29 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <ImageButton
+            <Button
                 android:id="@+id/librarybtn"
+                android:text="Library"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/ic_library"
+                android:textColor="@color/white"
+                android:textSize="16pt"
+                android:paddingTop="300px"
+                android:drawableTop="@drawable/ic_library"
                 android:background="@color/darkGreen"
                 android:onClick="goToLibrary" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/timetablebtn"
+                android:text="Timetable"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/ic_timetable"
+                android:textColor="@color/white"
+                android:textSize="14pt"
+                android:paddingTop="300px"
+                android:drawableTop="@drawable/ic_timetable"
                 android:background="@color/green"  />
         </LinearLayout>
     </LinearLayout>
