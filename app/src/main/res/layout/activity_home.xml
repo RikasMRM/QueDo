@@ -23,13 +23,6 @@
             app:popupTheme="@style/AppTheme.PopupOverlay"
             android:elevation="4dp">
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_baseline_more"
-                android:layout_gravity="right"
-                android:layout_marginRight="4dp"
-                android:background="@color/colorPrimary"/>
 
         </androidx.appcompat.widget.Toolbar>
 

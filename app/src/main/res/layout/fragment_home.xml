@@ -26,20 +26,20 @@
                 android:textSize="16pt"
                 android:layout_weight="1"
                 android:paddingTop="300px"
-                android:background="@color/lightyellow"
+                android:background="@color/lightgreen"
                 android:drawableTop="@drawable/ic_reminder" />
 
 
             <Button
                 android:id="@+id/quizzesbtn"
-                android:text="Quiz"
+                android:text="NOTES"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textColor="@color/white"
                 android:textSize="16pt"
                 android:paddingTop="300px"
-                android:drawableTop="@drawable/ic_quizzes"
+                android:drawableTop="@drawable/ic_baseline_note"
                 android:background="@color/colorAccent" />
 
         </LinearLayout>
