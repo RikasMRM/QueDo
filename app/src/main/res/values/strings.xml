@@ -115,4 +115,5 @@
 
     <string name="searchBook">Type name of the book</string>
     <string name="timeNameError">Timetable name is required.</string>
+    <string name="thisFieldError">This field is required.</string>
 </resources>
