@@ -2,6 +2,7 @@ package com.example.quedo;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +26,7 @@ public class ProfileFragment extends Fragment {
 
     TextView mUserName, mEmail;
     String userID;
+    public static final String TAG = "TAG";
 
     FirebaseAuth mAuth;
     FirebaseFirestore fStore;
@@ -43,17 +45,24 @@ public class ProfileFragment extends Fragment {
 
         if(mAuth.getCurrentUser() != null) {
             userID = mAuth.getCurrentUser().getUid();
+
+            DocumentReference documentReference = fStore.collection("users").document(userID);
+            documentReference.addSnapshotListener(ProfileFragment.this.getActivity(), new EventListener<DocumentSnapshot>() {
+                @Override
+                public void onEvent(@javax.annotation.Nullable DocumentSnapshot documentSnapshot, @javax.annotation.Nullable FirebaseFirestoreException e) {
+                    if (e!=null){
+                        Log.d(TAG,"Error:"+e.getMessage());
+                    }
+                    else {
+                        mUserName.setText(documentSnapshot.getString("userName"));
+                        mEmail.setText(documentSnapshot.getString("email"));
+                    }
+                }
+            });
         }
 
 
-        DocumentReference documentReference = fStore.collection("users").document(userID);
-        documentReference.addSnapshotListener(ProfileFragment.this.getActivity(), new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@javax.annotation.Nullable DocumentSnapshot documentSnapshot, @javax.annotation.Nullable FirebaseFirestoreException e) {
-                mUserName.setText(documentSnapshot.getString("userName"));
-                mEmail.setText(documentSnapshot.getString("email"));
-            }
-        });
+
 
         editPro.setOnClickListener(new View.OnClickListener() {
             @Override
