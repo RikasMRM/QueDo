@@ -14,8 +14,6 @@
         <activity android:name=".SignUp"></activity>
         <activity android:name=".InputActivity"></activity>
         <activity android:name=".QuickNotes" />
-        <activity android:name=".AddNewTimeTable"></activity>
-        <activity android:name=".SignUp" />
         <activity android:name=".Results" />
         <activity android:name=".Questions" />
         <activity android:name=".QuizzesDetails" />
@@ -29,13 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Home">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-        </activity>
+        <activity android:name=".Home"></activity>
     </application>
 
 </manifest>

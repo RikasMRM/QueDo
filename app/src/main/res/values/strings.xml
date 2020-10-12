@@ -114,4 +114,5 @@
     <string name="quick_note">Quick Note</string>
 
     <string name="searchBook">Type name of the book</string>
+    <string name="timeNameError">Timetable name is required.</string>
 </resources>
