@@ -7,271 +7,29 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/addDocTitle"
+        android:id="@+id/SubjectsTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="15dp"
         android:padding="10dp"
-        android:text="Timetable 1"
+        android:text="Timetable"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="38dp"
         android:textStyle="bold" />
 
-    <LinearLayout
+    <ProgressBar
+        android:id="@+id/progressBarTable"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-
-        <EditText
-            android:id="@+id/searchTable"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginRight="10dp"
-            android:drawableLeft="@drawable/ic_baseline_search"
-            android:drawablePadding="10dp"
-            android:drawableTint="@color/colorPrimaryDark"
-            android:hint="@string/searchTable" />
-
-
-    </LinearLayout>
-
-
-
-    <androidx.cardview.widget.CardView android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="13dp"
-        android:backgroundTint="@color/lightgreen"
-        android:elevation="4dp"
-        android:padding="10dp"
-        app:cardCornerRadius="10dp"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:android="http://schemas.android.com/apk/res/android">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/sub_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:layout_marginLeft="10dp"
-                android:text="MAD"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/sub_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:layout_below="@+id/sub_name"
-                android:text="08:30 AM - 10:30 AM"
-                android:layout_marginLeft="15dp"
-                android:layout_marginBottom="5dp"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/sub_hall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:layout_toRightOf="@+id/sub_time"
-                android:layout_below="@+id/sub_name"
-                android:text="Lecture, B405"
-                android:layout_marginLeft="15dp"
-                android:layout_marginBottom="5dp"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="13dp"
-        android:backgroundTint="@color/lightyellow"
-        android:elevation="4dp"
-        android:padding="10dp"
-        app:cardCornerRadius="10dp"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:android="http://schemas.android.com/apk/res/android">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/sub_name2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:layout_marginLeft="10dp"
-                android:text="PnS"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/sub_time2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:layout_below="@+id/sub_name2"
-                android:text="10:30 AM - 12:30 AM"
-                android:layout_marginLeft="15dp"
-                android:layout_marginBottom="5dp"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/sub_hall2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:layout_toRightOf="@+id/sub_time2"
-                android:layout_below="@+id/sub_name2"
-                android:text="Lecture, N3B"
-                android:layout_marginLeft="15dp"
-                android:layout_marginBottom="5dp"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="13dp"
-        android:backgroundTint="@color/colorAccent"
-        android:elevation="4dp"
-        android:padding="10dp"
-        app:cardCornerRadius="10dp"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:android="http://schemas.android.com/apk/res/android">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/sub_name3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:layout_marginLeft="10dp"
-                android:text="DSA"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/sub_time3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:layout_below="@+id/sub_name3"
-                android:text="12:30 AM - 02:30 pM"
-                android:layout_marginLeft="15dp"
-                android:layout_marginBottom="5dp"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/sub_day3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:layout_toRightOf="@+id/sub_hall3"
-                android:layout_below="@+id/sub_name3"
-                android:text="Monday"
-                android:layout_marginLeft="15dp"
-                android:layout_marginBottom="5dp"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/sub_hall3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:layout_toRightOf="@+id/sub_time3"
-                android:layout_below="@+id/sub_name3"
-                android:text="Lecture, A405"
-                android:layout_marginLeft="15dp"
-                android:layout_marginBottom="5dp"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="13dp"
-        android:backgroundTint="@color/green"
-        android:elevation="4dp"
-        android:padding="10dp"
-        app:cardCornerRadius="10dp"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:android="http://schemas.android.com/apk/res/android">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/sub_name4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:layout_marginLeft="10dp"
-                android:text="ESD"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/sub_time4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:layout_below="@+id/sub_name4"
-                android:text="02:30 PM - 04:30 PM"
-                android:layout_marginLeft="15dp"
-                android:layout_marginBottom="5dp"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/sub_hall4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:layout_toRightOf="@+id/sub_time4"
-                android:layout_below="@+id/sub_name4"
-                android:text="Lecture, B505"
-                android:layout_marginLeft="15dp"
-                android:layout_marginBottom="5dp"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
+        android:id="@+id/subRecycle"
+        android:padding="4dp"
+        android:scrollbars="vertical"/>
 
     <Button
         android:id="@+id/addSub"
