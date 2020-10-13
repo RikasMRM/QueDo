@@ -54,19 +54,19 @@ public class Subjects extends Fragment {
         mRecyclerView = rootView.findViewById(R.id.subRecycle);
 
 
-        Query query2 = myRef.child("Subjects").child("-MIo4jk0qE5lE1GhXI0r").orderByChild("subName");
-
-        mRecyclerView.setLayoutManager(
-                new LinearLayoutManager(getActivity()));
-
-                FirebaseRecyclerOptions<Subject> options =
-                        new FirebaseRecyclerOptions.Builder<Subject>()
-                                .setQuery(query2, Subject.class)
-                                .build();
-
-                subjectAdapter = new SubjectAdapter(options);
-
-                mRecyclerView.setAdapter(subjectAdapter);
+//        Query query2 = myRef.child("Subjects").child("-MIo4jk0qE5lE1GhXI0r").orderByChild("subName");
+//
+//        mRecyclerView.setLayoutManager(
+//                new LinearLayoutManager(getActivity()));
+//
+//                FirebaseRecyclerOptions<Subject> options =
+//                        new FirebaseRecyclerOptions.Builder<Subject>()
+//                                .setQuery(query2, Subject.class)
+//                                .build();
+//
+//                subjectAdapter = new SubjectAdapter(options);
+//
+//                mRecyclerView.setAdapter(subjectAdapter);
 
 
 
@@ -106,6 +106,23 @@ public class Subjects extends Fragment {
                     }
                 });
 
+                Query query2 = myRef.child("Subjects").child(result2).orderByChild("subName");
+
+                mRecyclerView.setLayoutManager(
+                        new LinearLayoutManager(getActivity()));
+
+                FirebaseRecyclerOptions<Subject> options =
+                        new FirebaseRecyclerOptions.Builder<Subject>()
+                                .setQuery(query2, Subject.class)
+                                .build();
+
+                subjectAdapter = new SubjectAdapter(options);
+
+                mRecyclerView.setAdapter(subjectAdapter);
+
+                subjectAdapter.startListening();
+
+
                 Bundle keytime = new Bundle();
                 keytime.putString("timetableID", result2);
                 getParentFragmentManager().setFragmentResult("requestKey2", keytime);
@@ -117,7 +134,7 @@ public class Subjects extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        subjectAdapter.startListening();
+//        subjectAdapter.startListening();
     }
 
     @Override
@@ -131,7 +148,7 @@ public class Subjects extends Fragment {
     public void onStop()
     {
         super.onStop();
-        subjectAdapter.stopListening();
+//        subjectAdapter.stopListening();
     }
 
     @Override
