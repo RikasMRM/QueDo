@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.quedo">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,16 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".SignUp"></activity>
         <activity android:name=".InputActivity"></activity>
         <activity android:name=".QuickNotes" />
         <activity android:name=".AddNewTimeTable"></activity>
-        <activity android:name=".Results" />
-        <activity android:name=".Questions" />
-        <activity android:name=".QuizzesDetails" />
-        <activity android:name=".QuizzesHome" />
+        <activity android:name=".SignUp" />
         <activity android:name=".EditProfile" />
-        <activity android:name=".userLogin"></activity>
+        <activity android:name=".userLogin" />
         <activity android:name=".HomeW">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +24,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Home"></activity>
+        <activity android:name=".Home">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
     </application>
 
 </manifest>

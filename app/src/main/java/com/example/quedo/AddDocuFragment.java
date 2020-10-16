@@ -158,6 +158,7 @@ public class AddDocuFragment extends Fragment {
                 if ( childRes == "Yes" | childRes == "No") {
                     mchildRestText.setVisibility(View.GONE);
                     myRef = FirebaseDatabase.getInstance().getReference();
+//                    myRef.child("Documents").child(Integer.toString(random.nextInt(100))).setValue(document);
                     myRef.child("Documents").push().setValue(document);
 
                     validateStatus = true;

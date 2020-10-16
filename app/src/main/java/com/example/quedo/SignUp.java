@@ -26,6 +26,8 @@ import java.util.Map;
 public class SignUp extends AppCompatActivity {
     public static final String TAG = "TAG";
 
+//    private static final String TAG = "EmailPassword";
+
     FirebaseAuth mAuth;
     FirebaseFirestore fStore;
     EditText mUsername, mEmail, mPassword, mRePassword;

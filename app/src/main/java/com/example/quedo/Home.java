@@ -62,9 +62,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 if(mAuth.getCurrentUser() != null) {
                     mAuth.signOut();
                     startActivity(new Intent(Home.this, HomeW.class));
-                    Home.this.finish();
+                    finish();
                 }
-                break;
             case R.id.nav_profile:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new ProfileFragment()).commit();
