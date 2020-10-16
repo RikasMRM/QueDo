@@ -42,7 +42,7 @@
                 android:id="@+id/task"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="I Want To"
+                android:hint="I Want to"
                 android:textStyle="bold"
                 android:layout_margin="18dp"/>
         </RelativeLayout>
