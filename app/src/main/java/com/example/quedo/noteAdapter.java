@@ -84,6 +84,9 @@ public class noteAdapter extends FirebaseRecyclerAdapter<
 
         holder.title.setText(model.getTitle());
 
+        // Add lastname from model class (here
+        // "person.class")to appropriate view in Card
+        // view (here "person.xml")
         holder.note.setText(model.getDesc());
 
     }
@@ -100,6 +103,8 @@ public class noteAdapter extends FirebaseRecyclerAdapter<
         return new noteAdapter.noteViewholder(view);
     }
 
+    // Sub Class to create references of the views in Crad
+    // view (here "person.xml")
     class noteViewholder
             extends RecyclerView.ViewHolder {
         TextView title, note;

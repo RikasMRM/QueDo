@@ -15,6 +15,7 @@
         <activity android:name=".QuickNotes" />
         <activity android:name=".AddNewTimeTable"></activity>
         <activity android:name=".SignUp" />
+        <activity android:name=".Results" />
         <activity android:name=".EditProfile" />
         <activity android:name=".userLogin" />
         <activity android:name=".HomeW">
