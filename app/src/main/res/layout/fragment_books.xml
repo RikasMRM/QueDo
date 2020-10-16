@@ -32,33 +32,19 @@
         app:queryHint="@string/searchBook"
         />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ProgressBar
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ProgressBar
-            android:id="@+id/progressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="27dp"
-            android:layout_marginBottom="3dp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+        android:layout_height="80px"
+        android:id="@+id/progressBar"
+        android:visibility="invisible"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sorted By A-Z"
+        android:text="Sort By A-Z"
         android:layout_marginLeft="4dp"
         android:padding="4dp"
-        android:id="@+id/sortBy"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="12sp" />
 
