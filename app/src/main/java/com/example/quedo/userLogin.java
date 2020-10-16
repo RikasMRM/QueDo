@@ -65,10 +65,11 @@ public class userLogin extends AppCompatActivity {
                         if(task.isSuccessful()) {
                             Toast.makeText(userLogin.this, "Logged in Successful", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), Home.class));
-                        }else  {
+                        } else  {
                             Toast.makeText(userLogin.this, "Error!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
+
                 });
 
 //                startActivity(new Intent(userLogin.this, Home.class));
@@ -76,4 +77,6 @@ public class userLogin extends AppCompatActivity {
             }
         });
     }
+
+
 }
