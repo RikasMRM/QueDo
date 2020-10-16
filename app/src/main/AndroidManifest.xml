@@ -14,6 +14,7 @@
         <activity android:name=".SignUp"></activity>
         <activity android:name=".InputActivity"></activity>
         <activity android:name=".QuickNotes" />
+        <activity android:name=".AddNewTimeTable"></activity>
         <activity android:name=".Results" />
         <activity android:name=".Questions" />
         <activity android:name=".QuizzesDetails" />
