@@ -40,6 +40,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.stream.Stream;
 
 import static android.content.ContentValues.TAG;
 import static androidx.core.content.ContextCompat.getSystemService;
@@ -53,11 +54,9 @@ public class BooksFragment extends Fragment {
     FirebaseRecyclerAdapter<Document, exampleViewholder2> firebaseRecyclerAdapter;
     FirebaseRecyclerOptions<Document> options;
 
-    String docName, docAuth, docLink, docID;
-    ArrayList<ExampleItem> exampleList = new ArrayList<>();
     SearchView searchView;
     ProgressBar progressBar;
-    public static final String TAG = "TAG";
+    TextView sort;
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
@@ -67,13 +66,14 @@ public class BooksFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         mAuth = FirebaseAuth.getInstance();
-        myRef = FirebaseDatabase.getInstance().getReference().child("Documents");
+        myRef = FirebaseDatabase.getInstance().getReference().child("Books");
 
         Query query = myRef.orderByChild("docuName");
 
         mRecyclerView = rootView.findViewById(R.id.bookRecycle);
         searchView = rootView.findViewById(R.id.findBooks);
         progressBar = rootView.findViewById(R.id.progressBar);
+        sort = rootView.findViewById(R.id.sortBy);
 
         mRecyclerView.setLayoutManager(
                 new LinearLayoutManager(this.getActivity()));
@@ -95,6 +95,11 @@ public class BooksFragment extends Fragment {
                 new RecyclerItemClickListener(getContext(), mRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
+                        Toast.makeText(BooksFragment.this.getActivity(), "Long press to download", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onLongItemClick(View view, int position) {
                         String key = exampleAdapter.getItem(position).getDocuLink();
                         Toast.makeText(BooksFragment.this.getActivity(), "Your file is downloading ..", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent();
@@ -102,12 +107,6 @@ public class BooksFragment extends Fragment {
                         intent.addCategory(Intent.CATEGORY_BROWSABLE);
                         intent.setData(Uri.parse(key));
                         startActivity(intent);
-                    }
-
-                    @Override
-                    public void onLongItemClick(View view, int position) {
-                        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                                new EditDocuFragment()).addToBackStack(null).commit();
                     }
                 })
         );
@@ -121,7 +120,6 @@ public class BooksFragment extends Fragment {
 
                 @Override
                 public boolean onQueryTextChange(String s) {
-//                    search(s);
                     firebaseSearch(s);
                     return true;
                 }
@@ -137,34 +135,13 @@ public class BooksFragment extends Fragment {
         exampleAdapter.startListening();
     }
 
-//    private void search(final String str) {
-//        progressBar.setVisibility(View.VISIBLE);
-//        Toast.makeText(this.getActivity(), "Started Search " + str, Toast.LENGTH_LONG).show();
-//
-//
-//        Query firebaseSearchQuery = FirebaseDatabase.getInstance().getReference().child("Documents")
-//                .startAt(str)
-//                .endAt(str + "\uf8ff");
-//
-//        FirebaseRecyclerOptions<Document> options =
-//                new FirebaseRecyclerOptions.Builder<Document>()
-//                        .setQuery(firebaseSearchQuery, Document.class)
-//                        .setLifecycleOwner(this.getActivity())
-//                        .build();
-//
-//        exampleAdapter = new ExampleAdapter(options);
-//
-//        mRecyclerView.setLayoutManager(
-//                new LinearLayoutManager(this.getContext()));
-//        mRecyclerView.setAdapter(exampleAdapter);
-//    }
-
     private void firebaseSearch(String searchText) {
         progressBar.setVisibility(View.VISIBLE);
+        sort.setVisibility(View.GONE);
 
         String query = searchText;
 
-        Query firebaseSearchQuery = FirebaseDatabase.getInstance().getReference().child("Documents").orderByChild("docuName")
+        Query firebaseSearchQuery = FirebaseDatabase.getInstance().getReference().child("Books").orderByChild("docuName")
                 .startAt(query).endAt(query + "\uf8ff");
 
 
@@ -175,48 +152,24 @@ public class BooksFragment extends Fragment {
             protected void onBindViewHolder(@NonNull exampleViewholder2 holder, int position, @NonNull Document document) {
                 holder.setDetails(getContext(), document.getDocuName(), document.getDocuAuth());
                 progressBar.setVisibility(View.GONE);
+                sort.setVisibility(View.VISIBLE);
             }
 
             @NonNull
             @Override
             public exampleViewholder2 onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                //Inflating layout row.xml
+
                 View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.example_item, parent, false);
 
                 exampleViewholder2 viewHolder = new exampleViewholder2(itemView);
-//                //item click listener
-//                viewHolder.setOnClickListener(new exampleViewholder2.ClickListener() {
-//                    @Override
-//                    public void onItemClick(View view, int position) {
-//                        //get data from firebase at the position clicked
-//                        String mTitle = getItem(position).getTitle();
-//                        String mDesc = getItem(position).getDescription();
-//                        String mImagse = getItem(position).getImage();
-//
-//                        //pass this data to new activity
-//                        Intent intent = new Intent(view.getContext(), PostDetailActivity.class);
-//                        intent.putExtra("title", mTitle); // put title
-//                        intent.putExtra("description", mDesc); //put description
-//                        intent.putExtra("image", mImage); //put image url
-//                        startActivity(intent); //start activity
-//                    }
-//
-//                    @Override
-//                    public void onItemLongClick(View view, int position) {
-//                        //Todo implement you on long click functionality here
-//                    }
-//                });
 
                 return viewHolder;
             }
         };
 
-        //set layout as LinearLayout
         mRecyclerView.setLayoutManager(
                 new LinearLayoutManager(this.getContext()));
-//        mRecyclerView.setLayoutManager(mLayoutManager);
         firebaseRecyclerAdapter.startListening();
-        //set adapter to firebase recycler view
         mRecyclerView.setAdapter(firebaseRecyclerAdapter);
 
     }
